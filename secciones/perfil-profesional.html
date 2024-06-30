@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagros Energeticos</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/imagenes/logo.png">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawCharts);
+
+        function drawCharts() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Acupuntura', 11],
+                ['Ventosas', 2],
+                ['Moxibustion', 2],
+                ['Masajes', 2],
+                ['Quiropraxia', 5],
+                ['Kinesiologia', 2]
+            ]);
+
+            var options = {
+                title: 'Tratamientos'
+            };
+
+            var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart1.draw(data, options);
+
+            var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart2.draw(data, options);
+
+            var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+            chart3.draw(data, options);
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Raleway", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .main {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .charts {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chart {
+            width: 30%;
+        }
+        .sidebar {
+            margin-top: 20px;
+        }
+        .sidebar .item {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar (sit on top) -->
+        <div>
+          <div class="w3-bar w3-card" id="myNavbar">
+            <a href="../index.html"><img class="logo" src="../imagenes/logo.png" alt=""></a>
+            <div class="w3-right w3-hide-small menu-links">
+              <a href="turnos.html" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i> TURNOS</a>
+              <a href="../index.html#about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> NOSOTROS</a>
+              <a href="../index.html#tratamientos" class="w3-bar-item w3-button"><i class="fa fa-dot-circle-o"></i> TRATAMIENTOS</a>
+              <a href="../index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+              <a href="#" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PERFIL</a>
+            </div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+          <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar ×</a>
+          <a href="turnos.html"onclick="w3_close()" class="w3-bar-item w3-button">TURNOS</a>
+          <a href="../index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">NOSOTROS</a>
+          <a href="../index.html#tratamientos" onclick="w3_close()" class="w3-bar-item w3-button">TRATAMIENTOS</a>
+          <a href="../index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+          <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PERFIL</a>
+        </nav>
+        </header>
+    <main>
+        <div class="main">
+            <h1>Perfil completo del paciente</h1>
+            <h2>Estadísticas de seguimiento</h2>
+            <div class="charts">
+                <div id="piechart1" class="chart"></div>
+                <div id="piechart2" class="chart"></div>
+                <div id="piechart3" class="chart"></div>
+            </div>
+            <div class="sidebar">
+                <div class="item">Tratamiento 29-06</div>
+                <div class="item">Tratamiento 7-07</div>
+                <div class="item">Tratamiento 14-07</div>
+                <div class="item">Tratamiento 21-07</div>
+            </div>
+        </div>
+    </main>
+<!-- Footer -->
+<footer >
+    <div class="mapa">
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13125.456632530742!2d-58.5628052!3d-34.6707576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1719346534496!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+      <div class="medios-de-pago"> 
+        <h5>Nuestros medios de pagos</h5>
+        <img src="../imagenes/visa.jpg" alt="visa">
+        <img src="../imagenes/mercadopago.png" alt="mercado pago">
+        <img src="../imagenes/efectivo.png" alt="efectivo">
+      </div>
+     
+      <div class="redes">
+        <h5>Seguinos en nuestras redes</h5>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-xxlarge"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-xxlarge"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-xxlarge"></i>
+      </div>
+   
+    <p class="w3-center">Diseñado por Ayala Lazarte, Nadia | Castelli Garaycochea, Mora | Julian Borrello, Magali</p>
+  </footer>
+  
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/script/inicioSesion.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+    </body>
+    </html>
+    
