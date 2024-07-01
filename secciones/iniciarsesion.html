@@ -48,13 +48,11 @@
     <div class="w3-card-4 w3-container w3-padding-large w3-light-grey caja-gris" >
       <h3 class="w3-center" style="margin-top: 30px;">INICIAR SESION</h3>
       <div style="margin-top:30px">
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-          <p><input class="w3-input w3-border" type="password" placeholder="Contraseña" required name="Password"></p>
+        <form id="loginForm">
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required id="email"></p>
+          <p><input class="w3-input w3-border" type="password" placeholder="Contraseña" required id="password"></p>
           <p>
-            <button class="w3-button w3-black w3-block" type="submit">
-              INGRESAR
-            </button>
+            <button class="w3-button w3-black w3-block" type="submit">INGRESAR</button>
           </p>
           <p>
             <a href="../secciones/crearcuenta.html" class="w3-button w3-block">
@@ -125,8 +123,22 @@ function w3_open() {
     document.getElementById("mySidebar").style.display = "none";
   }
 
-
-</script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+  
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+  
+      // Lógica para redirigir según el email y la contraseña
+      if (email === 'perfilprofesional@gmail.com' && password === '123456') {
+          window.location.href = "../secciones/perfil-profesional.html";
+      } else if (email === 'perfilusuario@gmail.com' && password === '123456') {
+          window.location.href = "../secciones/perfil-cliente.html";
+      } else {
+          alert('Credenciales incorrectas');
+      }
+  });
+  </script>
 
 </body>
 </html>
