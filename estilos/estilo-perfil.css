@@ -1,0 +1,52 @@
+
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+ 
+}
+
+table{
+    width: 500px;
+}
+
+
+
+
+th, td {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(126, 125, 125, 0.5); 
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+     
+    }
+    
+    table{
+        width: 350px;
+    }
+}
+
+/* Navbar */
+.logo {
+    max-width: 100px;
+}
+
+/* Sidebar */
+.w3-sidebar {
+    width: 100%;
+}

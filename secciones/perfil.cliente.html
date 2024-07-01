@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Milagros Energeticos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../estilos/style.css">
+
+  <link rel="stylesheet" href="../estilos/estilo-perfil.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="../imagenes/logo.png">
+
+  <!--<style>
+    th,td{
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: center;
+    }
+    </style>-->
+</head>
+
+<body>
+  <header>
+    <!-- Navbar (sit on top) -->
+    <div>
+      <div class="w3-bar w3-card" id="myNavbar">
+        <a href="../index.html"><img class="logo" src="../imagenes/logo.png" alt=""></a>
+        <div class="w3-right w3-hide-small menu-links">
+          <a href="turnos.html" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i> TURNOS</a>
+          <a href="../index.html#about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> NOSOTROS</a>
+          <a href="../index.html#tratamientos" class="w3-bar-item w3-button"><i class="fa fa-dot-circle-o"></i>
+            TRATAMIENTOS</a>
+          <a href="../index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PERFIL</a>
+        </div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
+      id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
+        ×</a>
+      <a href="turnos.html" onclick="w3_close()" class="w3-bar-item w3-button">TURNOS</a>
+      <a href="../index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">NOSOTROS</a>
+      <a href="../index.html#tratamientos" onclick="w3_close()" class="w3-bar-item w3-button">TRATAMIENTOS</a>
+      <a href="../index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button"> PERFIL</a>
+    </nav>
+  </header>
+  <main>
+    <div class="cuerpo">
+      <div class="container">
+        <div>
+          <div class="content">
+            <form action="/action_page.php" target="_blank">
+              <h2>Datos Personales</h2>
+              <label for="nombre">Nombre</label>
+              <p><input class="w3-input w3-border" type="text" placeholder="nombre" required name="nombre"
+                  value="Mariana"></p>
+              <label for="apellido">Apellido</label>
+              <p><input class="w3-input w3-border" type="text" placeholder="apellido" required name="apellido"
+                  value="Gonzales"></p>
+              <label for="fechaNac">Fecha de nacimiento</label>
+              <p><input class="w3-input w3-border" type="date" required name="fechaNac" value="29/07/1993"></p>
+              <p>
+                <button class="w3-button w3-black w3-block" type="submit" style="margin-top: 15px;"><a
+                    href="../secciones/perfil.html">EDITAR</a>
+                </button>
+                <button class="w3-button w3-black w3-block" type="submit" style="margin-top: 15px;"><a
+                    href="../secciones/perfil.html">GUARDAR</a>
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+      
+      <div class="tabla">
+        <h2>Mis Turnos</h2>
+        <h3>Turnos Actuales</h3>
+        <table>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Profesional</th>
+          </tr>
+          <tr>
+            <td><i style="font-size:24px" class="fa">&#xf073;</i> 26/05/2024</td>
+            <td><i style="font-size:24px" class="fa">&#xf017;</i> 17:00 hs</td>
+            <td><i class="fa fa-user"></i> Milagros Pereyra</td>
+          </tr>
+          <tr>
+            <td><i style="font-size:24px" class="fa">&#xf073;</i> 16/08/2024</td>
+            <td><i style="font-size:24px" class="fa">&#xf017;</i> 15:00 hs</td>
+            <td><i class="fa fa-user"></i> Milagros Pereyra</td>
+          </tr>
+        </table><br>
+        <h3>Turnos Históricos</h3>
+        <table>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Profesional</th>
+          </tr>
+          <tr>
+            <td><i style="font-size:24px" class="fa">&#xf073;</i> 04/10/2022</td>
+            <td><i style="font-size:24px" class="fa">&#xf017;</i> 13:00 hs</td>
+            <td><i class="fa fa-user"></i> Pedro Gonzalez</td>
+          </tr>
+          <tr>
+            <td><i style="font-size:24px" class="fa">&#xf073;</i> 11/04/2021</td>
+            <td><i style="font-size:24px" class="fa">&#xf017;</i> 14:00 hs</td>
+            <td><i class="fa fa-user"></i> Pedro Gonzalez</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13125.456632530742!2d-58.5628052!3d-34.6707576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1719346534496!5m2!1ses!2sar"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="medios-de-pago">
+      <h5>Nuestros medios de pagos</h5>
+      <img src="../imagenes/visa.jpg" alt="visa">
+      <img src="../imagenes/mercadopago.png" alt="mercado pago">
+      <img src="../imagenes/efectivo.png" alt="efectivo">
+    </div>
+
+    <div class="redes">
+      <h5>Seguinos en nuestras redes</h5>
+      <i class="fa fa-facebook-official w3-hover-opacity w3-xxlarge"></i>
+      <i class="fa fa-instagram w3-hover-opacity w3-xxlarge"></i>
+      <i class="fa fa-twitter w3-hover-opacity w3-xxlarge"></i>
+      <i class="fa fa-linkedin w3-hover-opacity w3-xxlarge"></i>
+    </div>
+
+    <p class="w3-center">Diseñado por Ayala Lazarte, Nadia | Castelli Garaycochea, Mora | Julian Borrello, Magali</p>
+  </footer>
+</body>
+
+</html>
